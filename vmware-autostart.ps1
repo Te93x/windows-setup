@@ -40,7 +40,7 @@ $batchContent = @"
 echo [%date% %time%] Waiting $DelaySeconds seconds... >> "%~dp0VM-Start.log"
 timeout /t $DelaySeconds /nobreak >nul
 echo [%date% %time%] Starting VM: $VMXPath >> "%~dp0VM-Start.log"
-"C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe" start "$VMXPath" nogui
+"C:\Program Files\VMware\VMware Workstation\vmrun.exe" start "$VMXPath" nogui
 if %errorlevel% equ 0 (echo [%date% %time%] Success >> "%~dp0VM-Start.log") else (echo [%date% %time%] Failed >> "%~dp0VM-Start.log")
 "@
 
